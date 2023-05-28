@@ -1,0 +1,5 @@
+maxl([],0).
+maxl([H|T],P):-
+    H > X, P is H, maxl(T,X).
+maxl([H|T],P):-
+    X >= H, P is X, maxl(T,X).

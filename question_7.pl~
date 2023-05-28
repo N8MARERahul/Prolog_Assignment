@@ -1,0 +1,3 @@
+conse([X,Y|T],P,Q]):-
+    P=X,Q=Y,conse(T,P,Q).
+

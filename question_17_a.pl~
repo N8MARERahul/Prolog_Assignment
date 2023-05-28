@@ -1,0 +1,9 @@
+remove(_,[],[]).
+remove(X,[X|T],T2):-
+    remove(X,T,T2).
+remove(X,[H|T],[H|T2]):-
+    X \= H, remove(X,T,T2).
+remove_duplicates([], []).
+remove_duplicates([X|Xs], [X|Ys]) :-
+    remove(X,Xs,Zs),
+    remove_duplicates(Zs, Ys).

@@ -1,0 +1,8 @@
+mem(X,[X|_]).
+mem(X,[_|T]):-
+    mem(X,T).
+remove_duplicate([],[]).
+remove_duplicate([H|T],RD):-
+    mem(H,T),!,remove_duplicate(T,RD).
+remove_duplicate([H|T],[H|RD]):-
+    remove_duplicate(T,RD).

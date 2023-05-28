@@ -1,0 +1,19 @@
+fibonacci:-
+    write('Enter the no of terms:  '),
+    read(N),
+    A is 0,
+    B is 1,
+    C is 3,
+    fibo(N,A,B,C).
+fibo(N,A,B,C):-
+    C =< N,
+    C1 is C + 1,
+    write(A),
+    write(' , '),
+    A1 is A + B,
+    fibo(N,B,A1,C1).
+fibo(N,A,B,C):-
+    C > N,
+    write(A),
+    write(' , '),
+    write(B).

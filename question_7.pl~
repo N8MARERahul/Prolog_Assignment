@@ -1,3 +1,4 @@
-conse([X,Y|T],P,Q]):-
-    P=X,Q=Y,conse(T,P,Q).
+conse([X,Y|_],X,Y).
+conse([_|T],X,Y):-
+    conse(T,X,Y).
 
